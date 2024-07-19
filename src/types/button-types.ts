@@ -15,4 +15,5 @@ export interface ReusableButtonProps {
     disabled?: boolean;
     loading?: boolean;
     className?: string;
+    type?: 'button' | 'submit' | 'reset' | undefined;
 }

@@ -21,7 +21,7 @@ const Banner = () => {
                     className='banner-image'
                 />
             </div>
-            <Container className='position-absolute bottom-0 start-50 translate-middle-x bg-white p-4 mb-5 banner-content'>
+            <Container className='banner-content p-4 mb-5'>
                 <Row>
                     <Col>
                         <p className='text-center fs-2 text-muted'>Get in touch</p>

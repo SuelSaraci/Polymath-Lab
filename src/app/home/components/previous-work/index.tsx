@@ -2,21 +2,23 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { previousWorkItems } from './helper';
-import Image from 'next/image';
+import './styles.css';
 
 const PreviousWork = () => {
-    const renderPreviousWorkImages = previousWorkItems.map((item) => {
+    const renderPreviousWorkImages = previousWorkItems.map((item, index) => {
+        const { icon: Icon } = item;
         return (
-            <Col>
-                <Image src={''} alt={''} />
+            <Col className='d-flex justify-content-center' key={index}>
+                <Icon fillProp='#ababab' key='Previous Work Images' />
             </Col>
         );
     });
     return (
-        <Container>
+        <Container className='mt-5 custom-previous-container p-5'>
             <Row>
                 <Col>
-                    <p>Previous work</p>
+                    <p className='text-center fs-2 text-muted'>Previous Work</p>
+                    <hr className='text-center custom-hr-style mx-auto' />
                 </Col>
             </Row>
 

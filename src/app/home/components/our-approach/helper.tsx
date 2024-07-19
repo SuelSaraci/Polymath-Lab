@@ -1,13 +1,11 @@
-import ExploreIcon from '../../../../assets/icons/searchIcon';
 import BrushIcon from '../../../../assets/icons/brushIcon';
-import BuildIcon from '../../../../assets/icons/build';
 import ReleaseIcon from '../../../../assets/icons/releaseIcon';
 import MaturateIcon from '../../../../assets/icons/maturateIcon';
 
 export const ourApproachItems = [
     {
         label: 'EXPLORE',
-        icon: ExploreIcon,
+        icon: ReleaseIcon,
     },
     {
         label: 'DESIGN',
@@ -15,7 +13,7 @@ export const ourApproachItems = [
     },
     {
         label: 'BUILD',
-        icon: BuildIcon,
+        icon: MaturateIcon,
     },
     {
         label: 'RELEASE',

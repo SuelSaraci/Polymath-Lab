@@ -1,25 +1,22 @@
 'use client';
-
-import React, { ChangeEvent } from 'react';
+import React, { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useFormik, FormikProps } from 'formik';
 import ReusableButton from '@/components/button';
-import { formItems } from './helper';
+import { formItems, initialValues } from './helper';
 import { FormItem } from '@/types/form-item-types';
+import { FormValues } from '@/types/form-values-types';
 
-const ApplyForm: React.FC = () => {
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        console.log(e.target.value);
-    };
+const ApplyForm: FC = () => {
+    const formik: FormikProps<FormValues> = useFormik<FormValues>({
+        initialValues: initialValues,
+        onSubmit: (values) => {
+            console.log(values);
+        },
+    });
 
     const renderFormItem = (item: FormItem, index: number) => {
         const Component = item.component;
-        const commonProps = {
-            key: index,
-            label: item.label,
-            placeholder: item.placeholder || item.label,
-            value: item.value || '',
-            onChange: handleChange,
-        };
 
         switch (item.type) {
             case 'input':
@@ -27,16 +24,27 @@ const ApplyForm: React.FC = () => {
             case 'textarea':
                 return (
                     <Col xs={12} md={6} className='mb-3' key={index}>
-                        <Component {...commonProps} />
+                        <Component
+                            name={item.name}
+                            label={item.label}
+                            placeholder={item.placeholder || item.label}
+                            value={formik.values[item.name] || ''}
+                            onChange={(event: { target: { value: any } }) =>
+                                formik.setFieldValue(item.name, event.target.value)
+                            }
+                        />
                     </Col>
                 );
             case 'checkbox':
                 return (
                     <Col xs={12} className='mb-3' key={index}>
                         <Component
-                            {...commonProps}
-                            checked={item.checked || false}
-                            onChange={handleChange}
+                            name={item.name}
+                            label={item.label}
+                            checked={formik.values[item.name] || false}
+                            onChange={(event: { target: { value: any } }) =>
+                                formik.setFieldValue(item.name, event.target.value)
+                            }
                         />
                     </Col>
                 );
@@ -44,9 +52,13 @@ const ApplyForm: React.FC = () => {
                 return (
                     <Col xs={12} md={6} className='mb-3' key={index}>
                         <Component
-                            {...commonProps}
+                            name={item.name}
+                            label={item.label}
                             options={item.options || []}
-                            onChange={(e: ChangeEvent<any>) => console.log(e)}
+                            value={formik.values[item.name] || ''}
+                            onChange={(event: { target: { value: any } }) =>
+                                formik.setFieldValue(item.name, event.target.value)
+                            }
                         />
                     </Col>
                 );
@@ -68,14 +80,14 @@ const ApplyForm: React.FC = () => {
 
     return (
         <Container>
-            <form className='mb-5 mt-5'>
+            <form className='mb-5 mt-5' onSubmit={formik.handleSubmit}>
                 <Row>
                     {/* Render all form fields */}
                     {formItems.map((item, index) => renderFormItem(item, index))}
                 </Row>
                 <Row>
                     <Col xs={12} className='mt-3'>
-                        <ReusableButton text='SEND MESSAGE >' variant='secondary' />
+                        <ReusableButton type='submit' text='SEND MESSAGE >' variant='secondary' />
                     </Col>
                 </Row>
             </form>

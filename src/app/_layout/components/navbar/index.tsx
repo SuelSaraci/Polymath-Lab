@@ -12,6 +12,11 @@ const CustomNavbar: React.FC = () => {
     const pathname = usePathname();
     const router = useRouter();
 
+    const handleHomeClick = () => {
+        // Use window.location.reload to force a page refresh
+        window.location.href = '/';
+    };
+
     const handleContactClick = () => {
         router.push('/contact');
     };
@@ -19,7 +24,7 @@ const CustomNavbar: React.FC = () => {
     return (
         <Navbar bg='light' expand='lg'>
             <Container className='d-flex justify-content-between'>
-                <Navbar.Brand href='/'>
+                <Navbar.Brand onClick={handleHomeClick} style={{ cursor: 'pointer' }}>
                     <Image
                         src={PolyMathLogo}
                         height={50}

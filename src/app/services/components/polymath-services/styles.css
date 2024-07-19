@@ -1,0 +1,34 @@
+.custom-hr-services-style {
+    border-top: 3px solid #3cc9f2;
+    width: 30px;
+}
+
+.custom-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.custom-icon {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 767px) {
+    .custom-img {
+        margin-bottom: 1rem;
+    }
+}
+
+.service-container {
+    margin-bottom: 0 !important;
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.service-description {
+    font-size: 14px;
+}

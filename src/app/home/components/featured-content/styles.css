@@ -1,0 +1,32 @@
+.featured-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.featured-card .card-content {
+    svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+.featured-card .date-person-folder {
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+.featured-card .date-person-folder p {
+    margin: 0;
+}
+
+.featured-card .title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.custom-hr-featured-style {
+    border-top: 3px solid #3cc9f2;
+    width: 30px;
+    margin-bottom: 2rem;
+}

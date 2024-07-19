@@ -13,11 +13,13 @@ const ReusableButton: React.FC<ReusableButtonProps> = ({
     disabled = false,
     loading = false,
     className = '',
+    type,
 }) => {
     return (
         <Button
             variant={variant}
             size={size}
+            type={type}
             onClick={onClick}
             disabled={disabled || loading}
             className={`custom-btn-style ${className}`}

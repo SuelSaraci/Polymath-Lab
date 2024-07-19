@@ -1,4 +1,5 @@
 export interface FormItem {
+    name: string;
     type: 'input' | 'phone' | 'checkbox' | 'dropdown' | 'textarea' | 'recaptcha';
     sitekey?: string;
     label: string;

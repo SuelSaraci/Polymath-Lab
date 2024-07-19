@@ -1,0 +1,8 @@
+.custom-previous-container {
+    background: #f4f4f4;
+
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+}

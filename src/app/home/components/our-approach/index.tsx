@@ -29,7 +29,13 @@ const OurApproach = () => {
                 >
                     <Icon fillColor={isActive ? '#1f62ae' : '#ffffff'} />
                 </div>
-                <p className={`text-center ${isActive ? 'fw-semibold' : 'text-muted'}`}>{label}</p>
+                <p
+                    className={`text-center fw-light ${
+                        isActive ? 'fw-semibold' : 'text-muted'
+                    } mt-2`}
+                >
+                    {label}
+                </p>
             </Col>
         );
     });
@@ -39,7 +45,7 @@ const OurApproach = () => {
             <Row>
                 <Col>
                     <p className='text-center fs-2 text-muted'>Our Approach</p>
-                    <hr className='text-center custom-hr-style mx-auto' />
+                    <hr className='text-center custom-hr-style-approach  mx-auto' />
                 </Col>
             </Row>
             <Row className='d-flex justify-content-center mb-5'> {renderOurApproach}</Row>

@@ -1,6 +1,5 @@
 import ChatBotServicesImages from '../../../../../public/images/awsChatBot.jpg';
 import WorkingAtPolymathLabImage from '../../../../../public/images/workingAtPolymath.jpg';
-import BeingProductiveKnowledgeImage from '../../../../../public/images/consultingPartnerAWS.png';
 
 export const featuredContentCards = [
     {
@@ -18,7 +17,7 @@ export const featuredContentCards = [
         title: 'Working at Polymath Labs',
     },
     {
-        image: BeingProductiveKnowledgeImage,
+        image: ChatBotServicesImages,
         date: 'SEP 23,2018',
         person: 'Visar',
         folder: 'Office',

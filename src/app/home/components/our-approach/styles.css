@@ -1,40 +1,78 @@
-.custom-hr-style {
-    border-top: 3px solid #3cc9f2; /* Adjust the color if needed */
-    width: 30px;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-}
-
 .custom-container {
     background: #f4f4f4;
+}
+
+.approach-item-container {
+    position: relative;
+    padding: 20px;
+    z-index: 2;
 }
 
 .approach-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     cursor: pointer;
-    padding: 20px;
     transition: background-color 0.3s, color 0.3s;
+    background-color: #1f62ae;
+    color: #ffffff;
+    border: 1px solid #1f62ae;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1;
 }
 
 .approach-item svg {
-    fill: currentColor; /* Use current text color for icon fill */
+    fill: currentColor;
     transition: fill 0.3s;
 }
 
 .approach-item-active {
-    background-color: #ffffff; /* White background for active item */
-    color: #1f62ae; /* Blue color for active text */
+    background-color: #ffffff;
+    color: #1f62ae;
+    border-color: #1f62ae;
 }
 
 .approach-item-inactive {
-    background-color: #1f62ae; /* Blue background for inactive item */
-    color: #ffffff; /* White color for inactive text */
+    background-color: #1f62ae;
+    color: #ffffff;
+    border-color: #1f62ae;
 }
 
-.approach-item svg {
-    fill: currentColor; /* Use current text color for icon fill */
-    transition: fill 0.3s;
+.custom-hr-style-approach {
+    border-top: 3px solid #3cc9f2;
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.approach-items-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.approach-item-container:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 36%;
+    width: -webkit-fill-available;
+    height: 1px;
+    background-color: #1f62ae;
+    z-index: -2;
+}
+
+@media (max-width: 767px) {
+    .approach-items-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .approach-item-container:not(:last-child)::after {
+        content: none;
+    }
 }

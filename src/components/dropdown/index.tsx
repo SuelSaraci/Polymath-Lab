@@ -17,11 +17,16 @@ const Dropdown: React.FC<DropdownProps> = ({
             </Form.Label>
             <Form.Control as='select' value={value} onChange={onChange} required={required}>
                 <option value=''>Select...</option>
-                {options.map((option, index) => (
-                    <option key={index} value={option}>
-                        {option}
-                    </option>
-                ))}
+                {options.map(
+                    (
+                        option: string | number | readonly string[] | undefined | any,
+                        index: React.Key | null | undefined,
+                    ) => (
+                        <option key={index} value={option}>
+                            {option.label}
+                        </option>
+                    ),
+                )}
             </Form.Control>
             {required && (
                 <Form.Text className='text-muted'>

@@ -16,3 +16,11 @@
 .custom-font-size {
     font-size: 12px;
 }
+
+.back-to-top-button {
+    cursor: pointer;
+    /* Add additional styling if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
