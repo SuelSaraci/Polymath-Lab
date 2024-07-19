@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 
 const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
     return (
-        <Form.Group controlId={`form${label}`}>
+        <Form.Group controlId={`form${label}`} className='mt-3'>
             <Form.Check type='checkbox' label={label} checked={checked} onChange={onChange} />
         </Form.Group>
     );

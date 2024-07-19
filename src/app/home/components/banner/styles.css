@@ -1,0 +1,30 @@
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.banner-image {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+.banner-content-container {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 41%;
+    max-width: 30%;
+    background-color: white;
+}
+
+/* Ensure to add responsive breakpoints if needed */
+@media (max-width: 767px) {
+    .banner-content-container {
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: inherit;
+        max-width: 50%;
+    }
+}

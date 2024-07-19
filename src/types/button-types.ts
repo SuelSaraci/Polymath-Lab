@@ -14,4 +14,5 @@ export interface ReusableButtonProps {
     size?: 'sm' | 'lg';
     disabled?: boolean;
     loading?: boolean;
+    className?: string;
 }

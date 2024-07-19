@@ -1,0 +1,13 @@
+.nav-link {
+    transition: all 0.3s ease;
+    text-decoration: none; /* Ensure text decoration is removed */
+}
+
+.nav-link-font-size {
+    font-size: 12px !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Adjust color as needed */
+}

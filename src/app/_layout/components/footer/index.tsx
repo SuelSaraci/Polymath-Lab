@@ -1,74 +1,67 @@
 import React from 'react';
 import { Col, Container, Row, Stack } from 'react-bootstrap';
 import ReusableButton from '@/components/button';
-import Image from 'next/image';
+
+import { socialIcons } from '@/app/contact/components/banner/helper';
+import './styles.css';
+import FooterLogoIcon from '@/assets/icons/footerLogoIcon';
+import TopArrowIcon from '@/assets/icons/topArrowIcon';
 
 const Footer = () => {
+    const renderSocialIcons = socialIcons.map((item) => {
+        const { icon: Icon } = item;
+
+        return <Icon fillColor={'#ffffff'} />;
+    });
+
     return (
-        <footer>
-            <Container>
+        <Container fluid className='customize-footer p-0'>
+            <Container className='mb-5'>
                 <Row>
                     <Col>
-                        <Stack gap={2}>
-                            <p>Call to action!</p>
-                            <ReusableButton text='LOREM IPSUM!' />
-                        </Stack>
+                        <p className='fs-2 mt-5 text-white fw-lighter'>Call to action!</p>
+                        <ReusableButton text='LOREM IPSUM >' variant='info' />
                     </Col>
                 </Row>
-                <Row>
+            </Container>
+            <hr className='text-white custom-hr-footer-style' />
+            <Container className='mb-3'>
+                <Row className='d-flex align-items-center'>
                     <Col>
-                        <Image
-                            src='/path/to/image.jpg'
-                            alt='Footer Image 1'
-                            width={100}
-                            height={100}
-                        />
+                        <FooterLogoIcon fillColor={'#ffffff'} />
                     </Col>
-                    <Col>
-                        <Stack direction='horizontal' gap={2}>
-                            <Image
-                                src='/path/to/image2.jpg'
-                                alt='Footer Image 2'
-                                width={50}
-                                height={50}
-                            />
-                            <Image
-                                src='/path/to/image3.jpg'
-                                alt='Footer Image 3'
-                                width={50}
-                                height={50}
-                            />
-                            <Image
-                                src='/path/to/image4.jpg'
-                                alt='Footer Image 4'
-                                width={50}
-                                height={50}
-                            />
+                    <Col className='d-flex justify-content-center'>
+                        <Stack direction='horizontal' gap={3}>
+                            {renderSocialIcons}
                         </Stack>
                     </Col>
-                    <Col>
-                        <Stack gap={2}>
-                            <p>
+                    <Col className='d-flex justify-content-end'>
+                        <Stack direction='horizontal' gap={2}>
+                            <p className='text-white custom-font-size'>
                                 BACK
                                 <br />
                                 ON TOP
                             </p>
-                            <Image
-                                src='/path/to/image5.jpg'
-                                alt='Footer Image 5'
-                                width={50}
-                                height={50}
-                            />
+                            <div>
+                                <TopArrowIcon fillColor='#ffffff' />
+                            </div>
                         </Stack>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <p>© Copyright 2024 Polymath Labs - All Rights Reserved</p>
-                    </Col>
-                </Row>
             </Container>
-        </footer>
+
+            <div className='custom-copyright'>
+                <Container>
+                    <Row className='d-flex align-items-center'>
+                        <Col className='d-flex '>
+                            <p className='text-white mb-0 custom-font-size'>
+                                © Copyright 2024 Polymath Labs - All Rights Reserved
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        </Container>
     );
 };
 

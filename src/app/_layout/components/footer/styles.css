@@ -1,0 +1,18 @@
+.customize-footer {
+    background-color: #0e1d42;
+}
+
+.custom-hr-footer-style {
+    border-width: 5px;
+}
+
+.custom-copyright {
+    background-color: #1f62ae;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-font-size {
+    font-size: 12px;
+}

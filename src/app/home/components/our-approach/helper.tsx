@@ -1,8 +1,8 @@
-import ExploreIcon from '../../../../../public/icons/searchIcon.svg';
-import BrushIcon from '../../../../../public/icons/brushIcon.svg';
-import BuildIcon from '../../../../../public/icons/build.svg';
-import ReleaseIcon from '../../../../../public/icons/releaseIcon.svg';
-import MaturateIcon from '../../../../../public/icons/maturateIcon.svg';
+import ExploreIcon from '../../../../assets/icons/searchIcon';
+import BrushIcon from '../../../../assets/icons/brushIcon';
+import BuildIcon from '../../../../assets/icons/build';
+import ReleaseIcon from '../../../../assets/icons/releaseIcon';
+import MaturateIcon from '../../../../assets/icons/maturateIcon';
 
 export const ourApproachItems = [
     {

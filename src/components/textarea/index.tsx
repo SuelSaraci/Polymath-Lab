@@ -1,6 +1,7 @@
 import { TextareaProps } from '@/types/textarea-types';
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import './styles.css';
 
 const Textarea: React.FC<TextareaProps> = ({
     label,
@@ -21,6 +22,7 @@ const Textarea: React.FC<TextareaProps> = ({
                 value={value}
                 onChange={onChange}
                 required={required}
+                className='custom-textarea'
             />
             {required && (
                 <Form.Text className='text-muted'>

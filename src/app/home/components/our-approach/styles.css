@@ -1,0 +1,40 @@
+.custom-hr-style {
+    border-top: 3px solid #3cc9f2; /* Adjust the color if needed */
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.custom-container {
+    background: #f4f4f4;
+}
+
+.approach-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.approach-item svg {
+    fill: currentColor; /* Use current text color for icon fill */
+    transition: fill 0.3s;
+}
+
+.approach-item-active {
+    background-color: #ffffff; /* White background for active item */
+    color: #1f62ae; /* Blue color for active text */
+}
+
+.approach-item-inactive {
+    background-color: #1f62ae; /* Blue background for inactive item */
+    color: #ffffff; /* White color for inactive text */
+}
+
+.approach-item svg {
+    fill: currentColor; /* Use current text color for icon fill */
+    transition: fill 0.3s;
+}

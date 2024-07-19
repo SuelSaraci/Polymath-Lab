@@ -1,6 +1,7 @@
 import { ReusableButtonProps } from '@/types/button-types';
 import React from 'react';
 import { Button, Spinner } from 'react-bootstrap';
+import './styles.css';
 
 // Reusable button component
 const ReusableButton: React.FC<ReusableButtonProps> = ({
@@ -11,9 +12,16 @@ const ReusableButton: React.FC<ReusableButtonProps> = ({
     size,
     disabled = false,
     loading = false,
+    className = '',
 }) => {
     return (
-        <Button variant={variant} size={size} onClick={onClick} disabled={disabled || loading}>
+        <Button
+            variant={variant}
+            size={size}
+            onClick={onClick}
+            disabled={disabled || loading}
+            className={`custom-btn-style ${className}`}
+        >
             {loading ? (
                 <Spinner as='span' animation='border' size='sm' role='status' aria-hidden='true' />
             ) : (

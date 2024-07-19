@@ -3,6 +3,7 @@ import Dropdown from '@/components/dropdown';
 import Input from '@/components/input';
 import PhoneNumberInput from '@/components/phone-number';
 import Textarea from '@/components/textarea';
+import ReCaptchaComponent from '@/components/re-captcha';
 import { FormItem } from '@/types/form-item-types';
 
 // Define all form items in an array
@@ -29,17 +30,17 @@ export const formItems: FormItem[] = [
         placeholder: 'Any other reference',
         component: Input,
     },
+    { type: 'dropdown', label: 'Years of experience', options: [], value: '', component: Dropdown },
+    { type: 'textarea', label: 'Textfield', placeholder: 'Textfield', component: Textarea },
     { type: 'checkbox', label: 'Front End', checked: false, component: Checkbox },
     { type: 'checkbox', label: 'Back End', checked: false, component: Checkbox },
     { type: 'checkbox', label: 'Databases', checked: false, component: Checkbox },
     { type: 'checkbox', label: 'Algorithms', checked: false, component: Checkbox },
     { type: 'checkbox', label: 'Architectures', checked: false, component: Checkbox },
     {
-        type: 'dropdown',
-        label: 'Years of experience',
-        options: [],
-        value: '',
-        component: Dropdown,
-    },
-    { type: 'textarea', label: 'Textfield', placeholder: 'Textfield', component: Textarea },
+        type: 'recaptcha',
+        sitekey: 'test',
+        label: '',
+        component: ReCaptchaComponent,
+    }, // Added ReCaptcha as a form item
 ];

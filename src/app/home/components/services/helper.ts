@@ -1,6 +1,6 @@
-import CloudDevelopmentIcon from '../../../../../public/icons/cloudDevelopmentIcon.svg';
-import CloudArchitectureIcon from '../../../../../public/icons/cloudArchitechture.svg';
-import CloudAdvisoryIcon from '../../../../../public/icons/cloudAdvisoryIcon.svg';
+import CloudDevelopmentIcon from '../../../../assets/icons/developmentIcon';
+import CloudArchitectureIcon from '../../../../assets/icons/cloudArchitechture';
+import CloudAdvisoryIcon from '../../../../assets/icons/cloudAdvisoryIcon';
 
 export const servicesCardItems = [
     {
